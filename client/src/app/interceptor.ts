@@ -3,7 +3,7 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/c
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class ExampleInterceptor implements HttpInterceptor {
+export class BasicInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const url = '/api';
     req = req.clone({
