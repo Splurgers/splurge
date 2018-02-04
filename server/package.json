@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build" : "snc ../splurge.yml -o ./codegen && cd codegen && npm install",
+    "start" : "mv ./codegen/node_modules ./node_modules_temp && rm -r ./codegen && snc ../splurge.yml -o ./codegen && rm -r ./codegen/src/api/services && cp -R ./services ./codegen/src/api/services && mv ./node_modules_temp ./codegen/node_modules && node codegen/src/bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "swagger-node-codegen": "1.1.0"
+  }
+}
