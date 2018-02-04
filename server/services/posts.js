@@ -53,7 +53,7 @@ module.exports.fetchPosts = async (options) => {
 
   return {
     code: 200,
-    data: { "LOL" : "LOL"} 
+    data: [{ "LOL" : "LOL"}]
   };
 };
 
